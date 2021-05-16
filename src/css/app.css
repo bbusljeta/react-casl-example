@@ -1,0 +1,12 @@
+/**
+* Import: vars
+* Description: variables
+*/
+@import 'vars.globals.css';
+@import 'vars.colors.css';
+
+/**
+* Import: component
+* Description: cross project reusable
+*/
+@import 'test.component.css';

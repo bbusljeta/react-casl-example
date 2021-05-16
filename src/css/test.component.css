@@ -1,0 +1,11 @@
+.test-class {
+    padding: calc(var(--unit) * 4);
+    color: var(--color-primary);
+    @media (max-width: 500px) {
+      background-color: red;
+  }
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+  }
