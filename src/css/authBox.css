@@ -1,0 +1,8 @@
+.auth-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box__item {
+  padding: 16px;
+}
