@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import { Admin, NoMatch, Unauthorized } from "../../views";
+import { ComponentExample, NoMatch } from "../../views";
 import { Homepage } from "../../views/Home";
+import { Imperative } from "../../views/Imperative";
 import { buildAbilityFor } from "../authorization";
-import { PrivateRoute } from "../routing/PrivateRoute";
 import { logOff, signInSuccess } from "../signIn";
 import { sessionCache } from "../signIn/cache";
 
@@ -29,15 +29,11 @@ export function Routing() {
       <Route path="/signin" exact>
         <Homepage />
       </Route>
-      <PrivateRoute
-        roleRequirements={["Admin", "Manager"]}
-        path={"/admin"}
-        exact
-      >
-        <Admin />
-      </PrivateRoute>
-      <Route path="/unauthorized" exact>
-        <Unauthorized />
+      <Route path="/imperative" exact>
+        <Imperative />
+      </Route>
+      <Route path="/component" exact>
+        <ComponentExample />
       </Route>
       <Route>
         <NoMatch />

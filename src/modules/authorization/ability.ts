@@ -2,12 +2,13 @@ import { AbilityBuilder, Ability } from "@casl/ability";
 import { defineRulesForAdmin, defineRulesForManager } from "./roles";
 
 // actions
-type Actions = "view" | "update" | "create";
+type Actions = "view" | "trigger";
 
 // subjects
 type AdminText = "AdminText";
-type ManageerText = "ManageerText";
-type Subjects = AdminText | ManageerText;
+type ManagerText = "ManagerText";
+type SomeAdminAction = "SomeAdminAction";
+type Subjects = AdminText | ManagerText | SomeAdminAction;
 
 export const ability = new Ability<[Actions, Subjects]>();
 export type AppAbility = Ability<[Actions, Subjects]>;
@@ -23,6 +24,5 @@ export default function defineRoleRules(role: string) {
 }
 
 export function buildAbilityFor(role: string) {
-  console.log("build ability for", role);
   ability.update(defineRoleRules(role));
 }

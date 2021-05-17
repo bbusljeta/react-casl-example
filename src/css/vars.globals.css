@@ -1,3 +1,16 @@
 :root {
-    --unit: 4px;
+  --unit: 4px;
+}
+
+.t-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.s-top-lrg {
+  margin-top: 24px;
+}
+
+.s-bottom-sml {
+  margin-bottom: 12px;
 }

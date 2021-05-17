@@ -7,7 +7,8 @@ export const defineRulesForAdmin = (
   const { can, rules, cannot } = abilityBuilder;
 
   can("view", "AdminText");
-  cannot("view", "ManageerText");
+  can("trigger", "SomeAdminAction");
+  cannot("view", "ManagerText");
 
   return rules;
 };
@@ -18,7 +19,8 @@ export const defineRulesForManager = (
   const { can, rules, cannot } = abilityBuilder;
 
   cannot("view", "AdminText");
-  can("view", "ManageerText");
+  cannot("trigger", "SomeAdminAction");
+  can("view", "ManagerText");
 
   return rules;
 };
