@@ -7,7 +7,7 @@ export function Imperative() {
   const ability = useAbility(AbilityContext);
 
   const handleAction = () => {
-    ability.can("view", "AdminText") && window.alert("My message");
+    ability.can("trigger", "SomeAdminAction") && window.alert("My message");
   };
 
   return (
@@ -22,7 +22,7 @@ export function Imperative() {
               isDisabled={false}
               onClick={handleAction}
             >
-              <div className="t-center">Some Action</div>
+              <div className="t-center">Some Admin Action</div>
             </Button>
           </div>
         </div>
